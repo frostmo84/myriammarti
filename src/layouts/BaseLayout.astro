@@ -1,0 +1,69 @@
+---
+import '../styles/global.css';
+
+const { title = 'Myriam Marti — Fotograf Oslo/Lillestrøm' } = Astro.props;
+---
+
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="border-b border-gray-100 px-6 py-4">
+      <nav class="max-w-5xl mx-auto flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="/myriammarti/" class="text-xl font-semibold tracking-tight">
+          Myriam Marti
+        </a>
+
+        <!-- Meny -->
+        <ul class="flex gap-8 text-sm text-gray-600">
+          <li><a href="/myriammarti/tjenester" class="hover:text-gray-900 transition">Tjenester</a></li>
+          <li><a href="/myriammarti/galleri" class="hover:text-gray-900 transition">Galleri</a></li>
+          <li><a href="/myriammarti/om-meg" class="hover:text-gray-900 transition">Om meg</a></li>
+          <li><a href="/myriammarti/priser" class="hover:text-gray-900 transition">Priser</a></li>
+          <li>
+            <a href="/myriammarti/kontakt"
+               class="bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition">
+              Book nå
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <!-- INNHOLD -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-100 px-6 py-10 mt-20">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-500">
+        <div>
+          <p class="font-semibold text-gray-900 mb-1">Myriam Marti Fotograf</p>
+          <p>Fetsund, Lillestrøm</p>
+          <p>Org.nr 822582222MVA</p>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900 mb-1">Kontakt</p>
+          <p>post@myriammarti.com</p>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900 mb-1">Følg meg</p>
+          <a href="https://instagram.com/myriammarti" class="hover:text-gray-900 transition">Instagram</a>
+        </div>
+      </div>
+      <p class="text-center text-xs text-gray-400 mt-8">
+        © {new Date().getFullYear()} Myriam Marti. Alle rettigheter forbeholdt.
+      </p>
+    </footer>
+
+  </body>
+</html>
