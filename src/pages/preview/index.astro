@@ -6,9 +6,7 @@ const base = import.meta.env.BASE_URL;
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400&display=swap');
 
-  /* ── Reset & base ── */
   .preview-wrap * { box-sizing: border-box; }
-
   .preview-wrap {
     background: #0e0d0b;
     color: #e8e0d5;
@@ -16,8 +14,6 @@ const base = import.meta.env.BASE_URL;
     font-weight: 300;
     min-height: 100vh;
   }
-
-  /* ── Preview banner ── */
   .preview-banner {
     background: #9A7B4F;
     color: white;
@@ -27,20 +23,15 @@ const base = import.meta.env.BASE_URL;
     letter-spacing: 0.2em;
     text-transform: uppercase;
   }
-
-  /* ── NAV ── */
   .nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 3rem;
-    mix-blend-mode: normal;
-    transition: background 0.4s ease;
+    transition: background 0.4s ease, padding 0.4s ease;
   }
   .nav.scrolled {
     background: rgba(14,13,11,0.92);
@@ -56,9 +47,7 @@ const base = import.meta.env.BASE_URL;
     color: #e8e0d5;
     text-decoration: none;
   }
-  .nav-logo span {
-    color: #9A7B4F;
-  }
+  .nav-logo span { color: #9A7B4F; }
   .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -84,20 +73,16 @@ const base = import.meta.env.BASE_URL;
     text-decoration: none;
     transition: all 0.3s;
   }
-  .nav-book:hover {
-    background: #9A7B4F;
-    color: #0e0d0b;
-  }
+  .nav-book:hover { background: #9A7B4F; color: #0e0d0b; }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
   }
   .hero-img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     object-position: center;
     filter: brightness(0.72);
@@ -109,19 +94,12 @@ const base = import.meta.env.BASE_URL;
     to   { transform: scale(1.0); }
   }
   .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(14,13,11,0.55) 0%,
-      rgba(14,13,11,0.1) 60%,
-      rgba(14,13,11,0.0) 100%
-    );
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.0) 70%);
   }
   .hero-content {
     position: absolute;
-    bottom: 12%;
-    left: 6%;
+    bottom: 12%; left: 6%;
     max-width: 520px;
     opacity: 0;
     transform: translateY(24px);
@@ -170,15 +148,10 @@ const base = import.meta.env.BASE_URL;
     padding-bottom: 0.3rem;
     transition: all 0.3s;
   }
-  .hero-cta:hover {
-    color: #9A7B4F;
-    border-color: #9A7B4F;
-    gap: 1.2rem;
-  }
+  .hero-cta:hover { color: #9A7B4F; border-color: #9A7B4F; gap: 1.2rem; }
   .hero-scroll {
     position: absolute;
-    bottom: 2.5rem;
-    right: 3rem;
+    bottom: 2.5rem; right: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,8 +167,7 @@ const base = import.meta.env.BASE_URL;
     writing-mode: vertical-rl;
   }
   .scroll-line {
-    width: 1px;
-    height: 60px;
+    width: 1px; height: 60px;
     background: linear-gradient(to bottom, #9A7B4F, transparent);
     animation: scrollLine 2s ease-in-out 2s infinite;
   }
@@ -205,11 +177,10 @@ const base = import.meta.env.BASE_URL;
     100% { transform: scaleY(1); transform-origin: top; opacity: 0; }
   }
 
-  /* ── INTRO ── */
+  /* INTRO */
   .intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
     min-height: 70vh;
   }
   .intro-text {
@@ -253,24 +224,17 @@ const base = import.meta.env.BASE_URL;
     transition: gap 0.3s;
   }
   .intro-link:hover { gap: 1.2rem; }
-  .intro-image {
-    position: relative;
-    overflow: hidden;
-  }
+  .intro-image { position: relative; overflow: hidden; }
   .intro-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
     filter: brightness(0.85) sepia(0.12);
     transition: transform 0.8s ease;
   }
   .intro-image:hover img { transform: scale(1.03); }
 
-  /* ── TJENESTER ── */
-  .services {
-    padding: 8rem 6%;
-  }
+  /* TJENESTER */
+  .services { padding: 8rem 6%; }
   .services-header {
     display: flex;
     justify-content: space-between;
@@ -306,8 +270,7 @@ const base = import.meta.env.BASE_URL;
   }
   .service-card img,
   .service-card .service-placeholder {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     filter: brightness(0.6) sepia(0.15);
     transition: transform 0.8s ease, filter 0.5s ease;
@@ -325,9 +288,7 @@ const base = import.meta.env.BASE_URL;
   }
   .service-info {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     padding: 2.5rem 2rem;
     background: linear-gradient(to top, rgba(14,13,11,0.9) 0%, transparent 100%);
   }
@@ -355,17 +316,14 @@ const base = import.meta.env.BASE_URL;
   }
   .service-card:hover .service-desc { max-height: 60px; }
 
-  /* ── SITAT ── */
+  /* SITAT */
   .quote-section {
     padding: 8rem 6%;
     display: flex;
     justify-content: center;
     border-top: 1px solid rgba(154,123,79,0.15);
   }
-  .quote-inner {
-    max-width: 700px;
-    text-align: center;
-  }
+  .quote-inner { max-width: 700px; text-align: center; }
   .quote-mark {
     font-family: 'Cormorant Garamond', serif;
     font-size: 5rem;
@@ -392,35 +350,31 @@ const base = import.meta.env.BASE_URL;
 </style>
 
 <div class="preview-wrap">
-  <div class="preview-banner">⚠ Preview — ikke publisert side</div>
+  <div class="preview-banner">&#x26A0; Preview &#8212; ikke publisert side</div>
 
   <!-- NAV -->
   <nav class="nav" id="mainNav">
-    <a href={`${base}`} class="nav-logo">Myriam Marti <span>·</span> Fotografi</a>
+    <a href={`${base}`} class="nav-logo">Myriam Marti <span>&middot;</span> Fotografi</a>
     <ul class="nav-links">
       <li><a href="#">Tjenester</a></li>
       <li><a href="#">Galleri</a></li>
       <li><a href="#">Om meg</a></li>
       <li><a href="#">Priser</a></li>
     </ul>
-    <a href="#" class="nav-book">Book nå</a>
+    <a href="#" class="nav-book">Book n&#229;</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <img
-      src={`${base}images/hero.jpg`}
-      alt="Myriam Marti Fotografi"
-      class="hero-img"
-    />
+    <img src={`${base}images/hero.jpg`} alt="Myriam Marti Fotografi" class="hero-img" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Fotograf · Oslo &amp; Lillestrøm</p>
+      <p class="hero-eyebrow">Fotograf &middot; Oslo &amp; Lillestr&#248;m</p>
       <h1 class="hero-title">
-        Øyeblikk som<br/><em>varer evig</em>
+        &#216;yeblikk som<br/><em>varer evig</em>
       </h1>
       <p class="hero-sub">
-        Gravid, nyfødt og familie — fotografert med ro, varme og et blikk for det ekte.
+        Gravid, nyf&#248;dt og familie &#8212; fotografert med ro, varme og et blikk for det ekte.
       </p>
       <a href="#" class="hero-cta">
         Book gratis konsultasjon
@@ -440,11 +394,11 @@ const base = import.meta.env.BASE_URL;
     <div class="intro-text">
       <p class="intro-label">Om fotograferingen</p>
       <h2 class="intro-heading">
-        Et rom fylt av<br/><em>stillhet og kjærlighet</em>
+        Et rom fylt av<br/><em>stillhet og kj&#230;rlighet</em>
       </h2>
       <p class="intro-body">
-        Jeg fotograferer i mitt atelier på Fetsund — et varmt, rolig rom designet for å få deg og familien til å slappe av. 
-        Det er her de ekte øyeblikkene oppstår.
+        Jeg fotograferer i mitt atelier p&#229; Fetsund &#8212; et varmt, rolig rom designet for &#229; f&#229; deg og familien til &#229; slappe av.
+        Det er her de ekte &#248;yeblikkene oppst&#229;r.
       </p>
       <a href="#" class="intro-link">
         Les mer om meg
@@ -484,8 +438,8 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="service-info">
           <p class="service-num">02</p>
-          <p class="service-name">Nyfødt&shy;fotografering</p>
-          <p class="service-desc">De første dagene — fanget for alltid.</p>
+          <p class="service-name">Nyf&#248;dt&shy;fotografering</p>
+          <p class="service-desc">De f&#248;rste dagene &#8212; fanget for alltid.</p>
         </div>
       </a>
 
@@ -499,7 +453,7 @@ const base = import.meta.env.BASE_URL;
         <div class="service-info">
           <p class="service-num">03</p>
           <p class="service-name">Familie&shy;fotografering</p>
-          <p class="service-desc">Naturlige øyeblikk med de du er glad i.</p>
+          <p class="service-desc">Naturlige &#248;yeblikk med de du er glad i.</p>
         </div>
       </a>
 
@@ -509,11 +463,11 @@ const base = import.meta.env.BASE_URL;
   <!-- SITAT -->
   <section class="quote-section">
     <div class="quote-inner">
-      <div class="quote-mark">"</div>
+      <div class="quote-mark">&#x201C;</div>
       <p class="quote-text">
-        Jeg ville aldri trodd at bildene kunne fange nøyaktig det øyeblikket — den stillheten, den varmen. Det er magisk.
+        Jeg ville aldri trodd at bildene kunne fange n&#248;yaktig det &#248;yeblikket &#8212; den stillheten, den varmen. Det er magisk.
       </p>
-      <p class="quote-author">— Tidligere kunde</p>
+      <p class="quote-author">&#8212; Tidligere kunde</p>
     </div>
   </section>
 
