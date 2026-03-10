@@ -5,19 +5,40 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Myriam Marti — Fotograf Oslo/Lillestrøm">
 
-  <!-- HERO -->
-  <section class="relative w-full overflow-hidden">
-    
-    <!-- Tekst overlay — nederst til venstre med god margin -->
-    <div class="absolute bottom-10 left-12 z-10">
-      <p class="text-2xl leading-tight font-light"
-         style="font-family: 'Playfair Display', serif; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.5); letter-spacing: 0.06em; line-height: 1.15;">
+  <!-- HERO: med margin rundt og tekst øverst til venstre -->
+  <section class="relative mx-4 mt-4 overflow-hidden rounded-sm" style="background-color: #1a1a1a;">
+
+    <!-- Tekst overlay — øverst til venstre som originalen -->
+    <div class="absolute top-8 left-10 z-10">
+      <p style="
+        font-family: 'Playfair Display', serif;
+        color: white;
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      ">
         MYRIAM<br/>MARTI
       </p>
-      <span class="inline-block mt-2 px-3 py-1 text-xs tracking-widest uppercase"
-            style="background-color: var(--color-gold); color: white; letter-spacing: 0.18em;">
-        FOTOGRAFI
-      </span>
+      <!-- FOTOGRAFI med gullbakgrunn som strekker seg ut -->
+      <div style="
+        background-color: var(--color-gold);
+        display: inline-block;
+        margin-top: 0.4rem;
+        padding: 0.3rem 0.8rem 0.3rem 0;
+        margin-left: -2.5rem;
+        padding-left: 2.5rem;
+      ">
+        <span style="
+          font-family: 'Playfair Display', serif;
+          color: white;
+          font-size: 2.8rem;
+          font-weight: 400;
+          letter-spacing: 0.04em;
+          line-height: 1.1;
+        ">FOTOGRAFI</span>
+      </div>
     </div>
 
     <!-- Hero-bilde -->
@@ -25,7 +46,7 @@ const base = import.meta.env.BASE_URL;
       src={`${base}images/hero.jpg`}
       alt="Myriam Marti Fotografi — gravid og nyfødt"
       class="w-full object-cover"
-      style="height: 88vh; object-position: center center;"
+      style="height: 90vh; object-position: center center; opacity: 0.92;"
     />
   </section>
 
@@ -36,7 +57,7 @@ const base = import.meta.env.BASE_URL;
       Øyeblikk du aldri vil glemme
     </h1>
     <p class="text-lg mb-10" style="color: var(--color-muted); line-height: 1.8;">
-      Jeg fotograferer gravide, nyfødte og familier — med varme, ro og et blikk for det ekte. 
+      Jeg fotograferer gravide, nyfødte og familier — med varme, ro og et blikk for det ekte.
       Velkommen til et trygt og avslappet fotoatelier på Fetsund.
     </p>
     <a href="/myriammarti/kontakt"
