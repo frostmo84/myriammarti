@@ -5,16 +5,17 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Myriam Marti — Fotograf Oslo/Lillestrøm">
 
-  <!-- HERO: stor bildeseksjon som originalen -->
-  <section class="relative w-full" style="background-color: var(--color-surface);">
+  <!-- HERO -->
+  <section class="relative w-full overflow-hidden">
     
-    <!-- Tekst overlay øverst til venstre -->
-    <div class="absolute top-8 left-10 z-10">
-      <p class="text-4xl font-light" style="font-family: 'Playfair Display', serif; color: white; text-shadow: 0 1px 4px rgba(0,0,0,0.4); letter-spacing: 0.04em; line-height: 1.2;">
+    <!-- Tekst overlay — nederst til venstre med god margin -->
+    <div class="absolute bottom-10 left-12 z-10">
+      <p class="text-2xl leading-tight font-light"
+         style="font-family: 'Playfair Display', serif; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.5); letter-spacing: 0.06em; line-height: 1.15;">
         MYRIAM<br/>MARTI
       </p>
-      <span class="inline-block mt-1 px-2 py-1 text-sm tracking-widest uppercase"
-            style="background-color: var(--color-gold); color: white; font-size: 0.75rem; letter-spacing: 0.15em;">
+      <span class="inline-block mt-2 px-3 py-1 text-xs tracking-widest uppercase"
+            style="background-color: var(--color-gold); color: white; letter-spacing: 0.18em;">
         FOTOGRAFI
       </span>
     </div>
@@ -24,7 +25,7 @@ const base = import.meta.env.BASE_URL;
       src={`${base}images/hero.jpg`}
       alt="Myriam Marti Fotografi — gravid og nyfødt"
       class="w-full object-cover"
-      style="max-height: 85vh; object-position: center top;"
+      style="height: 88vh; object-position: center center;"
     />
   </section>
 
@@ -45,7 +46,7 @@ const base = import.meta.env.BASE_URL;
     </a>
   </section>
 
-  <!-- TJENESTER med bilde -->
+  <!-- TJENESTER -->
   <section class="py-16" style="background-color: var(--color-surface);">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl text-center mb-3" style="font-family: 'Playfair Display', serif;">Hva jeg fotograferer</h2>
