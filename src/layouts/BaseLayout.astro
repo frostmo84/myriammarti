@@ -10,26 +10,27 @@ const { title = 'Myriam Marti — Fotograf Oslo/Lillestrøm' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
   </head>
-  <body class="bg-white text-gray-900 min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">
 
     <!-- HEADER -->
-    <header class="border-b border-gray-100 px-6 py-4">
+    <header class="px-6 py-5" style="background-color: var(--color-surface); border-bottom: 1px solid var(--color-border);">
       <nav class="max-w-5xl mx-auto flex items-center justify-between">
 
         <!-- Logo -->
-        <a href="/myriammarti/" class="text-xl font-semibold tracking-tight">
-          Myriam Marti
+        <a href="/myriammarti/" class="tracking-widest uppercase text-sm font-medium" style="color: var(--color-text); letter-spacing: 0.15em;">
+          Myriam Marti <span style="color: var(--color-gold);">Fotografi</span>
         </a>
 
         <!-- Meny -->
-        <ul class="flex gap-8 text-sm text-gray-600">
-          <li><a href="/myriammarti/tjenester" class="hover:text-gray-900 transition">Tjenester</a></li>
-          <li><a href="/myriammarti/galleri" class="hover:text-gray-900 transition">Galleri</a></li>
-          <li><a href="/myriammarti/om-meg" class="hover:text-gray-900 transition">Om meg</a></li>
-          <li><a href="/myriammarti/priser" class="hover:text-gray-900 transition">Priser</a></li>
+        <ul class="flex gap-8 text-sm" style="color: var(--color-muted);">
+          <li><a href="/myriammarti/tjenester" class="hover:opacity-70 transition">Tjenester</a></li>
+          <li><a href="/myriammarti/galleri" class="hover:opacity-70 transition">Galleri</a></li>
+          <li><a href="/myriammarti/om-meg" class="hover:opacity-70 transition">Om meg</a></li>
+          <li><a href="/myriammarti/priser" class="hover:opacity-70 transition">Priser</a></li>
           <li>
             <a href="/myriammarti/kontakt"
-               class="bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition">
+               class="px-5 py-2 rounded-full text-sm hover:opacity-80 transition"
+               style="background-color: var(--color-gold); color: white; letter-spacing: 0.05em;">
               Book nå
             </a>
           </li>
@@ -44,23 +45,23 @@ const { title = 'Myriam Marti — Fotograf Oslo/Lillestrøm' } = Astro.props;
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-gray-100 px-6 py-10 mt-20">
-      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-500">
+    <footer class="px-6 py-10 mt-20" style="border-top: 1px solid var(--color-border); background-color: var(--color-surface);">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm" style="color: var(--color-muted);">
         <div>
-          <p class="font-semibold text-gray-900 mb-1">Myriam Marti Fotograf</p>
+          <p class="font-semibold mb-1" style="color: var(--color-text); font-family: 'Playfair Display', serif;">Myriam Marti Fotografi</p>
           <p>Fetsund, Lillestrøm</p>
           <p>Org.nr 822582222MVA</p>
         </div>
         <div>
-          <p class="font-semibold text-gray-900 mb-1">Kontakt</p>
+          <p class="font-semibold mb-1" style="color: var(--color-text);">Kontakt</p>
           <p>post@myriammarti.com</p>
         </div>
         <div>
-          <p class="font-semibold text-gray-900 mb-1">Følg meg</p>
-          <a href="https://instagram.com/myriammarti" class="hover:text-gray-900 transition">Instagram</a>
+          <p class="font-semibold mb-1" style="color: var(--color-text);">Følg meg</p>
+          <a href="https://instagram.com/myriammarti" class="hover:opacity-70 transition">Instagram</a>
         </div>
       </div>
-      <p class="text-center text-xs text-gray-400 mt-8">
+      <p class="text-center text-xs mt-8" style="color: var(--color-muted);">
         © {new Date().getFullYear()} Myriam Marti. Alle rettigheter forbeholdt.
       </p>
     </footer>
